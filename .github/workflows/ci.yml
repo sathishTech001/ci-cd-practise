@@ -1,0 +1,5 @@
+name: My First CI
+on:
+    push:
+        branches:
+            -main
