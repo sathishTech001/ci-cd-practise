@@ -18,6 +18,9 @@ jobs:
 
           - name: Show current directory
             run: pwd
-            
+
           - name: List files
             run: ls -la
+
+          - name: Check operating system
+            run: uname -a
