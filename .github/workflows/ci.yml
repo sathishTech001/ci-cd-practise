@@ -15,7 +15,9 @@ jobs:
 
           - name: step2
             run: echo "hi this step two "
-            
+
           - name: Show current directory
             run: pwd
-          
+            
+          - name: List files
+            run: ls -la
