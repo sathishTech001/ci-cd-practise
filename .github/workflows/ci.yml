@@ -9,13 +9,21 @@ on:
 jobs:
     hello:
         runs-on: ubuntu-latest
-        steps:    
+        steps:
           - name: Checkout code
-            uses: actions/checkout@v3
+            uses: actions/checkout@v4
 
           - name: Setup Java
             uses: actions/setup-java@v4
+            with:
+              java-version: '17'
+              distribution: 'temurin'
 
+          - name: Check Java version
+            run: java --version
+
+          - name: Run Maven test
+            run: mvn test
           - name: say hello world
             run: echo "hello world first"
 
